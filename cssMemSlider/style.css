@@ -95,7 +95,7 @@ input[name="r"] {
 }
 
 .slider-text {
-	width: 15vw;
+	width: 200px;
 	height: 3vw;
 	overflow: hidden;
 	color: white;
