@@ -24,12 +24,16 @@ body {
 
 .bar {
 	display: inline-block;
-	height: 15px;
-	width: 15px;
+	height: 1rem;
+	width: 1rem;
 	border: 2px solid #fff;
 	border-radius: 50px;
 	cursor: pointer;
 	transition: all 0.4s ease;
+}
+
+.bar + .bar {
+	margin-left: 10px;
 }
 
 .bar:hover {
@@ -96,7 +100,8 @@ input[name="r"] {
 
 .slider-text {
 	width: 200px;
-	height: 3vw;
+	min-height: 2rem;
+	font-size: 1rem;
 	overflow: hidden;
 	color: white;
 }
@@ -108,6 +113,7 @@ input[name="r"] {
 }
 
 .slide-text {
+	min-height: 2rem;
 	width: 25%;
 	transition: all 0.6s ease;
 }
@@ -128,4 +134,19 @@ input[name="r"] {
 	margin-left: -75%;
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+	.bottom {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slider-text {
+		margin-top: 20px;
+	}
+
+	.slide-text {
+		text-align: center;
+	}
+}
 
