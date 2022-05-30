@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+}
+.container {
+	max-width: 45vw;
+	margin: 0 auto;
+
+}
+
+.slider {
+	width: 45vw;
+	overflow: hidden;
+	border: 5px solid #fff;
+}
+
+.navigation {
+	
+}
+
+.bar {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.4s ease;
+}
+
+.bar + .bar {
+	margin-left: 10px;
+}
+
+.bar:hover {
+	background-color: #fff;
+	opacity: 0.7;
+
+}
+
+input[name="r"] {
+	display: none;
+}
+
+.slides {
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+
+.slide {
+	width: 25%;
+	transition: all 0.6s ease;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+}
+
+#r1:checked ~ .slider > .slides > .s1 {
+	margin-left: 0;
+}
+
+#r2:checked ~ .slider > .slides > .s1 {
+	margin-left: -25%;
+}
+
+#r3:checked ~ .slider > .slides > .s1 {
+	margin-left: -50%;
+}
+
+#r4:checked ~ .slider > .slides > .s1 {
+	margin-left: -75%;
+}
+
+#r1:checked ~ .bottom > .navigation > .b1 {
+	background-color: white;
+}
+#r2:checked ~ .bottom > .navigation > .b2 {
+	background-color: white;
+}
+#r3:checked ~ .bottom > .navigation > .b3 {
+	background-color: white;
+}
+#r4:checked ~ .bottom > .navigation > .b4 {
+	background-color: white;
+}
+
+
+.bottom {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.slider-text {
+	width: 200px;
+	min-height: 2rem;
+	font-size: 1rem;
+	overflow: hidden;
+	color: white;
+}
+
+.slides-text {
+	width: 400%;
+	height: 100%;
+	display: flex;
+}
+
+.slide-text {
+	min-height: 2rem;
+	width: 25%;
+	transition: all 0.6s ease;
+}
+
+#r1:checked ~ .bottom > .slider-text > .slides-text .st1  {
+	margin-left: 0;
+}
+
+#r2:checked ~ .bottom > .slider-text > .slides-text .st1 {
+	margin-left: -25%;
+}
+
+#r3:checked ~ .bottom > .slider-text > .slides-text .st1  {
+	margin-left: -50%;
+}
+
+#r4:checked ~ .bottom > .slider-text > .slides-text .st1  {
+	margin-left: -75%;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+	.bottom {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.slider-text {
+		margin-top: 20px;
+	}
+
+	.slide-text {
+		text-align: center;
+	}
+}
+
